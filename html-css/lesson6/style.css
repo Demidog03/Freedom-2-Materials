@@ -1,0 +1,40 @@
+body {
+  height: 200vh;
+}
+
+.relative_div1 {
+  width: 400px;
+  height: 400px;
+  background-color: brown;
+  /* position: relative;
+  top: 40px; */
+  /* position: fixed;
+  top: 50px;
+  right: 0; */
+  position: sticky;
+  top: 0;
+  right: 0;
+}
+
+.relative_div2 {
+  width: 400px;
+  height: 400px;
+  background-color: rgb(44, 165, 42);
+  /* margin-top: 40px; */
+  /* position: relative;
+  top: 40px; */
+  position: relative;
+  z-index: 0;
+}
+
+.relative_div3 {
+  width: 400px;
+  height: 400px;
+  background-color: rgb(58, 42, 165);
+  z-index: 0;
+}
+
+.relative_div1_parent {
+  width: 800px;
+  height: 600px;
+}

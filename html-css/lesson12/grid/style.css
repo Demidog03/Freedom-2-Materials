@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  min-width: 300px;
+  padding: 200px 0;
+}
+
+.card.card1 {
+  background-color: cadetblue;
+  grid-column: 1/3;
+}
+
+.card.card2 {
+  background-color: rgb(160, 95, 143);
+  grid-column: 3/4;
+  grid-row: 1/3;
+}
+
+.card.card3 {
+  background-color: rgb(129, 160, 95);
+  grid-column: 1/3;
+}
+.card.card4 {
+  background-color: rgb(236, 203, 103);
+  grid-column: 1/4;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*ДРУГИЕ КАРТОЧКИ*/
+.card-container-alt {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, auto));
+  column-gap: 20px;
+  row-gap: 40px;
+}
+
+.card-alt {
+  padding: 200px 0;
+}
+.card-alt.card1 {
+  background-color: cadetblue;
+}
+.card-alt.card2 {
+  background-color: rgb(160, 95, 143);
+}
+.card-alt.card3 {
+  background-color: rgb(129, 160, 95);
+}
+.card-alt.card4 {
+  background-color: rgb(236, 203, 103);
+}

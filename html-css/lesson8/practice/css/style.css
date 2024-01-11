@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.select-container {
+  position: relative;
+  border-radius: 4px;
+}
+.select-container .select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #d169a3;
+  border: 2px solid #d169a3;
+  padding: 7px 10px;
+  border-radius: inherit;
+  cursor: pointer;
+  color: white;
+  padding-right: 32px;
+}
+.select-container .select:focus {
+  outline: none;
+  background-color: white;
+  color: #d169a3;
+}
+.select-container .select:focus + .select-icon {
+  background-color: #d169a3;
+  color: white;
+}
+.select-container .select:hover {
+  background-color: white;
+  color: #d169a3;
+}
+.select-container .select:hover + .select-icon {
+  background-color: #d169a3;
+  color: white;
+}
+.select-container .select option:hover {
+  background: #d169a3 !important;
+  box-shadow: 0 0 10px 100px #d169a3 inset !important;
+}
+.select-container .select-icon {
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: white;
+  height: 100%;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #d169a3;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+  color: #d169a3;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+
+.header-top {
+    background-image: url("./img/clouds.png");
+    padding: 120px 145px 138px;
+    background-size: cover;
+    background-position: center;
+}
+
+.header-top .title {
+    color: #003395;
+    font-size: 54px;
+    font-weight: 500;
+    margin-bottom: 27px;
+}
+
+.header-bottom {
+    padding: 27px 145px;
+    background-color: #003395;
+}
+
+.header-bottom a {
+    margin-right: 62px;
+    color: white;
+    font-size: 18px;
+}
+
+.header-bottom a:hover {
+    font-weight: 700;
+}
+
+/* MAIN */
+
+main {
+    padding: 60px 145px;
+}
+
+.news {
+    width: 754px;
+    display: inline-block;
+}
+
+.news_article {
+    margin-bottom: 34px;
+}
+
+.news_article h2 {
+    padding: 15px 0;
+    border-top: 2px solid #003395;
+    border-bottom: 2px solid #003395;
+    font-size: 32px;
+    color: #003395;
+    margin-bottom: 16px;
+}
+
+.news_article p {
+    font-size: 24px;
+}
+
+.news_article p a {
+    text-decoration: underline;
+    color: #003395;
+}
+
+.news_article.last_article {
+    margin-bottom: 0;
+}
+
+.sidebar{
+    width: 362px;
+    display: inline-block;
+    vertical-align: top;
+}

@@ -1,0 +1,8 @@
+.text{
+    font-size: 24px; /* размер текста */
+    font-weight: 900;
+    font-family: Verdana, sans-serif;
+    font-style: italic;
+    letter-spacing: 7px;
+    word-spacing: 40px;
+}

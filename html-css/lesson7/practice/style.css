@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: rgb(154, 154, 154);
+}
+
+header {
+  background-image: url("./images/header-bg.jpeg");
+  background-size: cover;
+}
+
+.container {
+  max-width: 1133px;
+  margin: 0 auto;
+}
+
+.header_nav_container {
+  display: flex;
+  justify-content: space-between;
+  padding: 36px 0 81px;
+}
+
+.header_nav_left {
+  display: flex;
+  align-items: center;
+}
+
+.header_nav_left img {
+  position: relative;
+  bottom: 10px;
+  margin-right: 26px;
+}
+
+.header_nav_right {
+  display: flex;
+  align-items: center;
+}
+
+.header_nav_right nav a {
+  color: white;
+  font-size: 18px;
+}
+
+.header_nav_right nav {
+  display: flex;
+  gap: 40px;
+}
+
+.lang1 {
+  color: white;
+  margin-right: 21px;
+}
+
+.lang2 {
+  color: white;
+}
+
+.header_nav_right .help-btn {
+  font-size: 18px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid #ffb800;
+  padding: 17px 35px;
+  border-radius: 10px;
+  margin-left: 35px;
+}
+
+.welcome-container {
+  display: flex;
+  padding-bottom: 205px;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.welcome_text {
+  max-width: 582px;
+}
+
+.welcome_text h1 {
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 26px;
+}
+
+.welcome_text p {
+  font-size: 20px;
+  max-width: 474px;
+  line-height: 38px;
+}
+
+.welcome_form {
+  max-width: 500px;
+  padding: 51px 70px 55px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  backdrop-filter: blur(12px);
+  background: rgba(51, 51, 51, 0.25);
+  box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.welcome_form input,
+.welcome_form select {
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding: 10px 13px;
+  color: white;
+}
+
+.welcome_form button {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #333;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  background-color: #ffb800;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.welcome_form button:hover {
+  background-color: #f9d16d;
+}
+
+.welcome_form input::placeholder {
+  color: white;
+}
+
+.welcome_form .welcome_form_date {
+  display: flex;
+  gap: 24px;
+}
+
+.welcome_form_date input {
+  width: 50%;
+}
+
+.welcome_form_search {
+  position: relative;
+}
+
+.welcome_form_search input {
+  width: 100%;
+}
+
+.welcome_form_search .search-icon {
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,49 @@
+.block_element {
+  display: block;
+}
+
+.inline_element {
+  display: inline;
+  height: 50px;
+  padding: 20px;
+}
+
+.inline-block_element {
+  display: inline-block;
+  height: 50px;
+  padding: 20px;
+}
+
+.flex {
+  /*display: flex;
+  /*flex-direction: column; /*направление флекса (колонна или строка)*/
+  /*flex-wrap: wrap; /* для того чтобы элементы которые не влезают спускались вниз */
+  /* align-items: center;
+  justify-content: left; */
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.box1 {
+  width: 60%;
+  height: 200px;
+  background-color: red;
+  border: 1px solid black;
+}
+
+.box2 {
+  width: 200px;
+  height: 400px;
+  background-color: rgb(0, 225, 255);
+  border: 1px solid black;
+}
+
+.box3 {
+  width: 30%;
+  height: 300px;
+  background-color: chartreuse;
+  border: 1px solid black;
+}

@@ -1,0 +1,31 @@
+@import "variables";
+@import "templates";
+@import "mixins";
+@import "global";
+
+body {
+  background-color: $bg-light;
+}
+
+.container {
+  width: 800px;
+  height: 800px;
+  background-color: red;
+  @include flex(row, flex-end, center, $gap: 50px, $wrap: wrap);
+
+  .box {
+    @extend %flex-center;
+    width: 400px;
+    height: 400px;
+    background-color: rgb(0, 255, 21);
+
+    &:hover {
+      //box:hover
+      background-color: rgb(195, 0, 255);
+    }
+
+    p {
+      color: rgb(18, 7, 29);
+    }
+  }
+}

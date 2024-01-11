@@ -1,0 +1,54 @@
+:root {
+    --bg-main: rgb(148, 215, 195);
+    --color-main: rgb(42, 165, 95);
+}
+
+body {
+    background-color: var(--bg-main);
+}
+
+.box1 {
+    width: 400px;
+    height: 400px;
+    background-color: rgb(218, 178, 186);
+    transition: background-color 1s ease-out;
+    color: white;
+    font-size: 24px;
+    padding: 20px;
+}
+
+.box1 p:nth-of-type(even) {
+    color: var(--color-main);
+}
+
+.box1:hover { /* наведение */
+    background-color: rgb(164, 70, 231);
+}
+
+.box1:active { /* нажать и зажать */
+    background-color: rgb(196, 231, 70);
+}
+
+.input1 {
+    padding: 10px 15px;
+    width: 500px;
+}
+
+.input1:focus {
+    color: blue;
+}
+
+.box2 {
+    color: var(--color-main);
+}
+
+.food-checkbox {
+    background-color: lawngreen;
+    
+}
+
+.food-checkbox:checked {
+    color: blue;
+    border: 2px solid black;
+}
+

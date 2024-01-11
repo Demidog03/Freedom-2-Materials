@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styles</title>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+    <!-- 1 способ - inline styles - вложенные стили -->
+    <!-- Минусы:
+        1. Не очень красиво (html + css)
+        2. Сложно менять несколько тэгов одновременно
+        3. Нарушает DRY
+    Плюс:
+        1. Если вам лень -->
+    
+        <!-- ПРИМЕР -->
+    <!-- <h1 style="color: blue;">Текст 1</h1>
+    <h1 style="color: blue;">Текст 2</h1>
+    <p style="color: blue;">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident soluta error tempore corrupti, consequuntur repellat repudiandae! Commodi corrupti non debitis?
+    </p> -->
+
+    <!-- DRY - do not repeat yourself -->
+
+
+    <!-- 2 способ - Встроенные стили - <style> tag - тэг <style> -->
+    <!-- Минусы:
+        1. Если пишем тэги то применяется ко всем тэгам
+        2. В HTML-е будет стили (ОЧЕЬ БОЛЬШОЙ ФАЙЛ)
+    Плюс:
+        1. Быстро стили прописать -->
+           
+        <!-- ПРИМЕР -->
+    <h1 class="big-text" style="color: black">Текст</h1>
+    <h1>Текст 2</h1> 
+    <h1 class="big-text">Текст 3</h1>
+
+
+    <!-- 2 способ - Внешние стили - файла .css -->
+</body>
+</html>

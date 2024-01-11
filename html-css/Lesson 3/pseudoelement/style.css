@@ -1,0 +1,59 @@
+.input1::placeholder {
+    color: red;
+}
+
+.box1 {
+    width: 400px;
+    height: 400px;
+    background-color: coral;
+}
+
+.box1::before {
+    content: "";
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+}
+
+.bell-icon{
+    width: 40px;
+    position: relative;
+}
+
+.bell-icon img {
+    width: 40px;
+}
+
+.bell-icon::before {
+    content: "";
+    background-color: orange;
+    width: 10px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    right: 0;
+    border-radius: 50%;
+}
+
+.bell-badge {
+    background-color: orange;
+    width: 10px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+}
+
+
+
+.list1 li::marker {
+    color: red;
+    font-size: 0;
+}
+
+.box .box1{
+    color: red;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <form>
+      <input type="text" placeholder="First name" />
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <input type="color" />
+      <input type="date" />
+      <input type="datetime-local" />
+      <input type="file" accept="application/pdf" />
+      <input type="month" />
+      <input type="number" />
+      <input type="reset" />
+      <input type="time" />
+      <input
+        type="url"
+        placeholder="https://example.com"
+        pattern="https://.*"
+      />
+      <input type="week" />
+      <input type="range" min="0" max="100" />
+
+      <button>Подтвердить</button>
+    </form>
+
+    <br />
+    <br />
+
+    <form>
+      <h2>Любимая еда</h2>
+      <label><input type="checkbox" /> Манты</label>
+      <label><input type="checkbox" /> Плов</label>
+      <label><input type="checkbox" /> Пицца</label>
+    </form>
+
+    <br />
+    <br />
+
+    <form>
+      <h2>Ваш пол</h2>
+      <label><input type="radio" name="gender" /> Мужской</label>
+      <label><input type="radio" name="gender" /> Женский</label>
+      <label><input type="radio" name="gender" /> Другой</label>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://ucarecdn.com/494dd874-3a1b-41d8-a30c-4b23088c6586/cat.png");
+    background-size: cover;
+    height: 100vh; /* viewport height */
+}
+
+.container {
+    width: 700px;
+    padding: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.container .block_title {
+    background: linear-gradient(0deg, rgba(212,0,0,1) 0%, rgba(0,0,0,1) 100%);
+    padding: 13px 10px;
+    margin-bottom: 10px;
+}
+
+.container .block {
+    margin-bottom: 20px;
+}
+
+.container .title {
+    margin-bottom: 25px;
+}
+
+.container .block_list {
+    list-style-position: inside;
+    padding: 0 20px;
+}

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,500,600&display=swap');
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.card{
+    width: 500px;
+    padding: 100px 90px 70px 70px;
+    border-width: 5px;
+    border-style: double;
+    border-color: black;
+    border: 5px double black;
+    box-sizing: border-box;
+}
+
+.card .card_title {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 30px;
+    color: red;
+}
+
+.card .card_subtitle {
+    margin-bottom: 15px;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+.card .card_desc {
+    margin-bottom: 10px;
+}
+.card .card_thanks_text {
+    margin-top: 5px;
+}
