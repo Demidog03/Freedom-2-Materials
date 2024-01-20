@@ -267,3 +267,62 @@
 //     alert('Вы подросток!')
 // }
 
+
+// 4 задача
+// let text = 'some text'
+
+// if(text === 'some text') { //'some text' === 'some text'
+//     text = 'another text'
+// }
+// else {
+//     text = 'some text'
+// }
+
+// console.log(text)
+
+// 5 задача
+// let num1 = -3
+
+// if(num1 === 0) {
+//     num1 = 1
+// }
+// else if(num1 < 0) {
+//     num1 = 'less then zero'
+// }
+// else if (num1 > 0) {
+//     num1 *= 10 // num1 = num1 * 10
+// }
+
+// console.log(num1)
+
+// 6 задача
+// const answer = +prompt('Введите число:')
+// let result
+
+// if(answer < 5) {
+//     result = 0
+// }
+// else if(answer > 5) {
+//     result = 1
+// }
+// console.log(result);
+
+
+// 7 задача
+const num1 = +prompt('Введите первое число:')
+const num2 = +prompt('Введите второе число:')
+
+if(num1 > num2) {
+    console.log(`Наибольшее число: ${num1}`);
+}
+else if(num1 < num2) {
+    console.log(`Наибольшее число: ${num2}`)
+}
+else {
+    console.log('Числа равны')
+}
+
+
+// java
+// string text = "some text"
+// int num1 = 4
