@@ -152,18 +152,37 @@
 
 
 // 8 задание
-function getRandomInteger(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
+// function getRandomInteger(min, max) {
+//     return Math.floor(Math.random() * (max - min)) + min;
+// }
+
+// function generateRGBColor(num1, num2, num3) {
+//     return `rgb(${num1}, ${num2}, ${num3})`
+// }
+
+// setInterval(() => {
+//     const randomNum1 = getRandomInteger(0, 255)
+//     const randomNum2 = getRandomInteger(0, 255)
+//     const randomNum3 = getRandomInteger(0, 255)
+//     const result1 = generateRGBColor(randomNum1, randomNum2, randomNum3)
+//     document.body.style.backgroundColor = result1
+// }, 300)
+
+function callToLesson(studentName, date, time) {
+    console.log(`Добрый день, ${studentName}. ${date} в ${time} запланирован урок. Прошу присоединиться в указанное время.`)
 }
 
-function generateRGBColor(num1, num2, num3) {
-    return `rgb(${num1}, ${num2}, ${num3})`
+callToLesson('Жанна', '21.01.2024', '19:00')
+
+function findStudentsNameCount(students, name) { // void, 
+    let count = 0
+    for (const student of students) {
+        if(student === name) {
+            count++
+        }
+    }
+    return count
 }
 
-setInterval(() => {
-    const randomNum1 = getRandomInteger(0, 255)
-    const randomNum2 = getRandomInteger(0, 255)
-    const randomNum3 = getRandomInteger(0, 255)
-    const result1 = generateRGBColor(randomNum1, randomNum2, randomNum3)
-    document.body.style.backgroundColor = result1
-}, 300)
+const result = findStudentsNameCount(['Сабит', 'Саят', 'Гульнар', 'Жанна', 'Гульмира', 'Жанна', 'Сабит'], 'Сабит')
+console.log(result)

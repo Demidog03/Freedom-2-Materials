@@ -213,23 +213,115 @@
 
 
 // 5 ЗАДАНИЕ
-const questions = [
-    {
-        question: "What's the currency of the USA?",
-        choices: ["US dollar", "Ruble", "Horses", "Gold"],
-        corAnswer: 0
-    },
-    {
-        question: "Where was the American Declaration of Independence signed?",
-        choices: ["Philadelphia", "At the bottom", "Frankie's Pub", "China"],
-        corAnswer: 0
-    }
-];
+// const questions = [
+//     {
+//         question: "What's the currency of the USA?",
+//         choices: ["US dollar", "Ruble", "Horses", "Gold"],
+//         corAnswer: 0
+//     },
+//     {
+//         question: "Where was the American Declaration of Independence signed?",
+//         choices: ["Philadelphia", "At the bottom", "Frankie's Pub", "China"],
+//         corAnswer: 0
+//     }
+// ];
 
-console.log(questions);
+// console.log(questions);
 
-for (const value of questions) {
-    value.userAnswer = null
-}
+// for (const value of questions) {
+//     value.userAnswer = null
+// }
+
+
+//ЗАДАНИЕ 6
+const numbers = [42, 65, 49, 68, 56, 50, 70, 42, 51, 35, 58, 63, 40, 70] // length = 14, last index = 13
+
+// 1
+// for (const number of numbers) {
+//     console.log(number);
+// }
+
+// for(let i = 0; i < numbers.length; i++) {
+//     console.log(numbers[i]) //numbers[13]
+// }
+
+
+//2
+// let sum = 0
+// for (const number of numbers) {
+//     sum += number
+//     console.log(sum);
+// }
+
+// console.log('Сумма все чисел в массиве: ' + sum)
+
+
+//3
+// let sum = 0
+// for (const number of numbers) {
+//     if(number % 2 === 0) {
+//         sum += number
+//     }
+// }
+
+// console.log('Сумма все чисел в массиве: ' + sum)
+
+
+//4
+// function max(arrayOfNumber) {
+//     let maxResult = arrayOfNumber[0] 
+//     for (const number of arrayOfNumber) { 
+//         if(typeof number !== 'number') {
+//             return `Array contains not number element: ${number}`
+//         }
+//         if(number > maxResult) {
+//             maxResult = number
+//         }
+//     }
+//     return maxResult
+// }
+
+// console.log(max(numbers))
+
+// console.log('Наибольшее число в массиве: ' + max)
+
+// const max = Math.max(...numbers)
+// console.log(max);
+
+
+//5
+// const maxResult = {
+//     value: numbers[0],
+//     index: []
+// }
+
+// for (let i = 0; i < numbers.length; i++) {
+//     if(numbers[i] === maxResult.value) {
+//         maxResult.index.push(i)
+//     }
+//     else if(numbers[i] > maxResult.value) {
+//         maxResult.value = numbers[i]
+//         maxResult.index = [i]
+//     }
+// }
+// console.log(maxResult)
+
+
+// let maxNumber = numbers[0]
+// let maxIndexes = []
+
+// for (let i = 0; i < numbers.length; i++) {
+//     if(numbers[i] === maxNumber) {
+//         maxIndexes.push(i) //[6, 13]
+//     }
+//     else if(numbers[i] > maxNumber) {
+//         maxNumber = numbers[i] // number[6] = 70
+//         maxIndexes = [i] // [6]
+//     }
+// }
+
+// console.log(maxNumber)
+// console.log(maxIndexes)
+
 
 
