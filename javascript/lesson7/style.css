@@ -1,0 +1,10 @@
+.subscribed {
+    background-color: red;
+    color: white;
+    font-size: bold;
+}
+
+.unsubscribed {
+    background-color: rgb(100, 100, 100);
+    color: white;
+}
