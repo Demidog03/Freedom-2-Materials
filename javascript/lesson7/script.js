@@ -169,13 +169,13 @@
 
 // КЛАССЫ В JS
 
-const isSubscribed = true
-const buttonElement = document.querySelector('.button1')
-if(!isSubscribed) {
-    buttonElement.innerText = 'ПОДПИСАТЬСЯ'
-    buttonElement.classList.add('subscribed')
-}
-else {
-    buttonElement.innerText = 'ОТПИСАТЬСЯ'
-    buttonElement.classList.add('unsubscribed')
-}
+// const isSubscribed = true
+// const buttonElement = document.querySelector('.button1')
+// if(!isSubscribed) {
+//     buttonElement.innerText = 'ПОДПИСАТЬСЯ'
+//     buttonElement.classList.add('subscribed')
+// }
+// else {
+//     buttonElement.innerText = 'ОТПИСАТЬСЯ'
+//     buttonElement.classList.add('unsubscribed')
+// }
