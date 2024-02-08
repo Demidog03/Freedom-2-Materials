@@ -1,0 +1,9 @@
+.todoFormInputGroup {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.todoFormSubmitButton {
+    text-wrap: nowrap;
+}
