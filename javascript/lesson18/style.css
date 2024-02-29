@@ -1,0 +1,28 @@
+.wrapper {
+    display: flex;
+    padding: 40px 0;
+}
+
+.user-list-group {
+    width: 200px;
+    min-width: 200px;
+    border-radius: 0;
+}
+
+.userlist-skeleton {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.userlist-skeleton span {
+    padding: 20px 0;
+}
+
+.sidebar-title {
+    margin-left: 20px;
+}
+
+#userSkeleton {
+    display: none;
+}
