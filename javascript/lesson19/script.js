@@ -267,8 +267,6 @@ logo2.left = 250
 //     height: 200
 // }
 
-
-
 class Circle {
     element = null
     constructor(size, color) {
