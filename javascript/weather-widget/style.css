@@ -1,0 +1,69 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.current-weather-container {
+    background-color: cornflowerblue;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.weather-info {
+    align-self: center;
+    text-align: center;
+}
+
+.weather-info img {
+    width: 50px;
+}
+
+.wind-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.future-weather-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+.future-weather-item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    border: 2px solid cornflowerblue;
+    border-top: 0;
+}
+
+.future-weather-item img {
+    width: 50px;
+}
+
+.future-weather-icon {
+    justify-self: center;
+}
+
+.future-weather-celcius {
+    justify-self: right;
+}

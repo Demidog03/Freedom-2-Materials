@@ -2,23 +2,19 @@
   "name": "lesson21",
   "version": "1.0.0",
   "description": "MyFreedom lesson 21 Project",
-  "main": "script.js",
-  "watch": {
-    "start": {
-      "patterns": [
-        ""
-      ],
-      "extensions": "js"
-    }
-  },
   "scripts": {
-    "start": "node axiosTest.js",
-    "watch": "npm-watch"
+    "clean:output": "rimraf dist",
+    "dev": "npm run clean:output && parcel index.html",
+    "build": "npm run clean:output && parcel build index.html"
   },
   "author": "Olzhas",
   "license": "ISC",
   "dependencies": {
-    "axios": "^1.6.7",
-    "npm-watch": "^0.11.0"
+    "axios": "^1.6.7"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0",
+    "parcel": "^2.12.0",
+    "rimraf": "^5.0.5"
   }
 }
