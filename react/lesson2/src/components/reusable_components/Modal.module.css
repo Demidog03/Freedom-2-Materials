@@ -1,0 +1,30 @@
+.modal {
+    position: fixed;
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.2);
+    left: 0;
+    top: 0;
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999999999;
+}
+
+.modal_container {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgb(240, 240, 240);
+    border-radius: 8px;
+    animation: appear 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+@keyframes appear {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(100%);
+    }
+}
