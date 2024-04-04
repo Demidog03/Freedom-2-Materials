@@ -1,0 +1,30 @@
+.container {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+    gap: 20px
+}
+
+.listItem p {
+    margin-bottom: 0;
+    align-self: flex-start;
+}
+
+.deleteBtn {
+    display: flex;
+    align-items: center;
+}
+
+.rightWrapper {
+    display: flex;
+    align-self: center;
+    gap: 10px;
+    margin-left: auto;
+}
