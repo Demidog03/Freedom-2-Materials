@@ -4,6 +4,9 @@ import ListGroup from 'react-bootstrap/ListGroup'
 import Button from 'react-bootstrap/Button'
 import Spinner from 'react-bootstrap/Spinner'
 import Badge from 'react-bootstrap/Badge'
+import Dropdown from 'react-bootstrap/Dropdown'
+import DropdownToggle from 'react-bootstrap/DropdownToggle'
+import DropdownMenu from 'react-bootstrap/DropdownMenu'
 import classes from './TodoList.module.css'
 import { toast } from 'react-hot-toast'
 import { ArrowLeftRight, Check2, X } from 'react-bootstrap-icons';
@@ -12,8 +15,11 @@ import { ArrowLeftRight, Check2, X } from 'react-bootstrap-icons';
 
 const TodoList = () => {
     const [todoList, setTodoList] = useState([])
+    const [filteredTodoList, setFilteredTodoList] = useState([])
     const [todoListLoading, setTodoListLoading] = useState(false)
-    const todoListElements = todoList.map(todo => (
+    const [statusFilter, setStatusFilter] = useState('Статус')
+
+    const todoListElements = (statusFilter === 'Статус' ? todoList : filteredTodoList).map(todo => (
         <ListGroup.Item key={todo.id} as="li" className={classes.listItem}>
             <p>{todo.title}</p>
             <div className={classes.rightWrapper}>
@@ -117,8 +123,33 @@ const TodoList = () => {
         )
     }
 
+    function chooseStatusFilter(filterName) {
+        setStatusFilter(filterName)
+        if (filterName === 'В работе') {
+            const filteredTodoList = todoList.filter(todo => !todo.completed)
+            setFilteredTodoList(filteredTodoList)
+        }
+        else if (filterName === 'Выполнено') {
+            const filteredTodoList = todoList.filter(todo => todo.completed)
+            setFilteredTodoList(filteredTodoList)
+        }
+    }
+
     return (
         <div className={classes.container}>
+            <div>
+                <Dropdown className={classes.dropdown}>
+                    <Dropdown.Toggle variant="primary" id="dropdown-basic">
+                        {statusFilter}
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu>
+                        <Dropdown.Item onClick={() => chooseStatusFilter('В работе')}>В работе</Dropdown.Item>
+                        <Dropdown.Item onClick={() => chooseStatusFilter('Выполнено')}>Выполнено</Dropdown.Item>
+                        <Dropdown.Item onClick={() => chooseStatusFilter('Статус')}>Все</Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
+            </div>
             {todoListElements.length === 0
                 ? <h2>Нет данных</h2>
                 : <ListGroup as="ol" numbered>
