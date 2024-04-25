@@ -4,4 +4,10 @@
     align-items: center;
     justify-content: center;
     height: 100dvh;
+    max-width: 600px;
+    margin-inline: auto;
+}
+
+.loginTitle {
+    margin-bottom: 40px;
 }

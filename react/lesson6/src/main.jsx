@@ -10,6 +10,8 @@ import './index.css'
 import ShopPage from './components/shop/ShopPage';
 import LoginPage from './components/login/LoginPage'
 import ShopItemPage from './components/shop/ShopItemPage';
+import AuthContextComponent from './components/contexts/AuthContext'
+import AuthGuard from './components/guards/AuthGuard';
 
 const router = createBrowserRouter([
   {
@@ -18,18 +20,28 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <LoginPage />,
+    element: <LoginPage />
+
   },
   {
     path: "/shop",
-    element: <ShopPage />,
+    element:
+      <AuthGuard>
+        <ShopPage />
+      </AuthGuard>
+    ,
   },
   {
     path: '/shop/:id',
-    element: <ShopItemPage />
+    element:
+      <AuthGuard>
+        <ShopItemPage />
+      </AuthGuard>
   }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <RouterProvider router={router} />
+  <AuthContextComponent>
+    <RouterProvider router={router} />
+  </AuthContextComponent>
 )

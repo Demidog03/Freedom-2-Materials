@@ -1,11 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import classes from './ShopPage.module.css'
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import ShopCard from './ShopCard';
-import { useState } from 'react';
 import Spinner from 'react-bootstrap/Spinner'
-import { useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 
 const ShopItemPage = () => {
