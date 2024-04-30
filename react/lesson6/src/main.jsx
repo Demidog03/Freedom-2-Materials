@@ -12,6 +12,11 @@ import LoginPage from './components/login/LoginPage'
 import ShopItemPage from './components/shop/ShopItemPage';
 import AuthContextComponent from './components/contexts/AuthContext'
 import AuthGuard from './components/guards/AuthGuard';
+import { Toaster } from 'react-hot-toast';
+import { createStore } from 'redux'
+import rootReducer from './store/reducers/rootReducer';
+import { Provider } from 'react-redux'
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 const router = createBrowserRouter([
   {
@@ -40,8 +45,14 @@ const router = createBrowserRouter([
   }
 ]);
 
+const store = createStore(rootReducer, composeWithDevTools())
+
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <AuthContextComponent>
+  <Provider store={store}>
     <RouterProvider router={router} />
-  </AuthContextComponent>
+    <Toaster
+      position="top-center"
+      reverseOrder={false}
+    />
+  </Provider>
 )

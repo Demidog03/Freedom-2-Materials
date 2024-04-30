@@ -1,10 +1,10 @@
-import React, { useContext, useEffect } from 'react';
-import { AuthContext } from '../contexts/AuthContext';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 const AuthGuard = ({ children }) => {
     const navigate = useNavigate()
-    const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext)
+    const { isLoggedIn } = useSelector(state => state.auth)
 
     useEffect(() => {
         if (!isLoggedIn) {
