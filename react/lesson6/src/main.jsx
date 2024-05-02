@@ -13,10 +13,11 @@ import ShopItemPage from './components/shop/ShopItemPage';
 import AuthContextComponent from './components/contexts/AuthContext'
 import AuthGuard from './components/guards/AuthGuard';
 import { Toaster } from 'react-hot-toast';
-import { createStore } from 'redux'
+import { applyMiddleware, createStore } from 'redux'
 import rootReducer from './store/reducers/rootReducer';
 import { Provider } from 'react-redux'
 import { composeWithDevTools } from 'redux-devtools-extension';
+import { thunk } from 'redux-thunk'
 
 const router = createBrowserRouter([
   {
@@ -45,7 +46,8 @@ const router = createBrowserRouter([
   }
 ]);
 
-const store = createStore(rootReducer, composeWithDevTools())
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(rootReducer, composeEnhancer(applyMiddleware(thunk)))
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Provider store={store}>

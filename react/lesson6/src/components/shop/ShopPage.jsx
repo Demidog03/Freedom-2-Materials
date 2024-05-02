@@ -1,21 +1,16 @@
-import React, { useContext, useEffect, useState } from 'react';
-import axios from 'axios'
+import React, { useEffect, useState } from 'react';
 import ShopCard from './ShopCard';
 import classes from './ShopPage.module.css'
 import Spinner from 'react-bootstrap/Spinner';
-import { useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { getCategoriesThunk, getProductsThunk, getProductsByCategoryThunk } from '../../store/thunks/productsThunk';
 
 const ShopPage = () => {
-    const navigate = useNavigate()
-    const [products, setProducts] = useState([])
-    const [productsLoading, setProductsLoading] = useState(false)
-    const [categories, setCategories] = useState([])
-    const [selectedCategory, setSelectedCategory] = useState('Категории')
     const dispatch = useDispatch()
+    const { products, productsLoading, categories, selectedCategory } = useSelector(state => state.products)
 
     // mount - первый рендер
     useEffect(() => {
@@ -24,16 +19,7 @@ const ShopPage = () => {
     }, [])
 
     async function getProducts() {
-        try {
-            setProductsLoading(true)
-            const res = await axios.get('https://fakestoreapi.com/products')
-            setProducts(res.data)
-        } catch (err) {
-            console.log(err);
-        }
-        finally {
-            setProductsLoading(false)
-        }
+        dispatch(getProductsThunk())
     }
 
     function logout() {
@@ -41,28 +27,11 @@ const ShopPage = () => {
     }
 
     async function getCategories() {
-        try {
-            const res = await axios.get('https://fakestoreapi.com/products/categories')
-            setCategories(res.data)
-        } catch {
-
-        } finally {
-
-        }
+        dispatch(getCategoriesThunk())
     }
 
     async function getProductsByCategory(category) {
-        setSelectedCategory(category)
-        try {
-            setProductsLoading(true)
-            const res = await axios.get(`https://fakestoreapi.com/products/category/${category}`)
-            setProducts(res.data)
-        } catch (err) {
-            console.log(err);
-        }
-        finally {
-            setProductsLoading(false)
-        }
+        dispatch(getProductsByCategoryThunk(category))
     }
 
     if (productsLoading) {

@@ -1,18 +1,32 @@
 const initialState = {
     isLoggedIn: false,
-    token: ''
+    token: '',
+    formErrors: {
+        username: '',
+        password: ''
+    }
+}
+
+// enum
+export const AUTH_ACTIONS = {
+    AUTH_LOGIN: 'auth/login',
+    AUTH_LOGOUT: 'auth/logout',
+    SET_ERRORS: 'auth/setErrors'
 }
 
 export function authReducer(state = initialState, action) { // state - состояние, action - методы
     switch (action.type) {
-        case 'auth/login': {
+        case AUTH_ACTIONS.AUTH_LOGIN: {
             console.log('Авторизация успешна');
             return { ...state, isLoggedIn: true, token: action.payload || '' }
         }
-        case 'auth/logout': {
+        case AUTH_ACTIONS.AUTH_LOGOUT: {
             console.log('Выход из системы');
             localStorage.removeItem('token');
             return { ...state, isLoggedIn: false }
+        }
+        case AUTH_ACTIONS.SET_ERRORS: {
+            return { ...state, formErrors: action.payload }
         }
         default: { // else
             return state
